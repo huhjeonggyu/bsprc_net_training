@@ -24,9 +24,9 @@ Additionally, the following facts are important.
 6. If the experiment goes well, as the number of data increases tenfold, R2 in test.ipynb is expected to roughly increase tenfold, and MSE is expected to decrease roughly tenfold.
 
 ## Usage
-1. **sample.ipynb**: Remember that each data generation saves 10,000 data.
-* train_data_num: number of training data files
-* test_data_num: number of test data files
+1. **sample.ipynb**: Remember that each data file saves 10,000 data.
+* train_data_num: the number of training data files
+* test_data_num: the number of test data files
 2. **train.ipynb**: network training
 * data_num: Decide how many data to use for network training. (Multiple of 10,000)
 3. **test.ipynb**: network performance test
