@@ -1,4 +1,4 @@
-# bsprc_net_training (version 0.0.1)
+# bsprc_net_training (version 0.0.2)
 
 The Monte-Carlo simulation to generate a large amount of time value data for arbitrary model parameters and option variables, where the time value means 'price-payoff' of the option. Afterward, we train a neural network to best learn this simulated data, with the goal of essentially considering the network as a closed pricing formula for the option. This approach potentially offers feasibility for all option pricing models. The current implementation supports both CPU and GPU for data generation, while network training is carried out solely on the GPU. Additionally, to complement the parallel processing capability of the CPU, 10 multi-processes are running. The GPU may be faster than the CPU for large amounts of parallel tasks.
 
