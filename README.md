@@ -18,7 +18,7 @@ There are also two directories with the following roles:
 Additionally, the following facts are important.
 1. Each data file contains 10,000 values.
 2. The range for model parameters and option variables is inclusive of volatility $\sigma$ from 0.01 to 1, maturity $T$ from 0.01 to 1, and strike price $K$ such that $\log(K)/\sqrt{T}(:=\tilde{K})$ ranges from -2 to 2.
-3. The network is a simple MLP with two hidden layers of 1000 nodes each, accepting $\sigma$, $T$, $\tilde{K}$, and outputting the option's time value tv.
+3. The network is a simple MLP with two hidden layers of 1000 nodes each, accepting $\sigma$, $T$, $\tilde{K}$, and outputting the option's time value $v$.
 4. The network is trained using the ADAM optimizer, and 30% of the training data is used solely for checking the learning rate decay condition.
 5. The early stopping rule applies if the loss of the validation dataset no longer decreases. (Deciding when to end training is a very important issue!)
 6. If the experiment goes well, as the number of data increases tenfold, R2 in test.ipynb is expected to roughly increase tenfold, and MSE is expected to decrease roughly tenfold.
