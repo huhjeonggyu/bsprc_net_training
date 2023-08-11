@@ -52,7 +52,9 @@ class EarlyStopping:
     def save_checkpoint(self, val_loss, model):
         if self.verbose:
             print(f'Validation loss decreased ({self.val_loss_min:.6f} --> {val_loss:.6f}).  Saving model ...')
-        torch.save(model.state_dict(), 'checkpoint.pt') # Save the model
+        if not os.path.exists('tmp') :
+            os.mkdir('tmp')
+        torch.save(model.state_dict(), 'tmp/checkpoint.pt') 
         self.val_loss_min = val_loss
 
 def seed_everything(seed):
